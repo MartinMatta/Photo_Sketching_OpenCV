@@ -39,7 +39,7 @@ Mat sketching(Mat src) {
 
     Mat src_0 = _sobel(src);
     Mat src_1 = _sobel(neg_img);
-    addWeighted(src_0, 1, src_1, 1, 0, dst);
+    addWeighted(src_0, 0.5, src_1, 0.5, 0, dst);
     dst = invert_image(dst);
 
     return dst;
