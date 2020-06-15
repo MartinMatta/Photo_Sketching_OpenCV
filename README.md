@@ -1,13 +1,14 @@
 # Photo Sketching OpenCV using c++
 
-## Algorithm
+## Algorithm in 6 steps
  * Load gray scale image
- * median bluring for noise remove
- * Create negative image
- * Edge detection for negative and gray vimage
- * add images
- * Invert nagative image
+ * Median noise reduction
+ * Create negative image (dst = 255 - src)
+ * Edge detection for negative and gray image
+ * Add images (dst = neg_img * 0.5 + gray_img * 0.5)
+ * Invert image
  
+g++ main.cpp -o main pkg-config --cflags --libs opencv
 
 ![jpg](/images/image.jpg)
 ![jpg](/doc/output.jpg)
